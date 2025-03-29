@@ -6,7 +6,7 @@ servo_bus = ServoBus('/dev/ttyUSB0')
 old_id = input("What is the old ID?")
 new_id = input("What is the new ID?")
 
-servo_bus.id_write(old_id, new_id)
+servo_bus.id_write(int(old_id), int(new_id))
 
 # Move servo with ID 1 to 90 degrees in 1.0 seconds
 # servo_bus.id_write(2, 1)
