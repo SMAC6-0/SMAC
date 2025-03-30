@@ -3,10 +3,20 @@ from lewansoul_servo_bus import ServoBus
 
 servo_bus = ServoBus('/dev/ttyUSB0')
 
-old_id = input("What is the old ID?")
-new_id = input("What is the new ID?")
+servo_bus.move_time_write(1, 90, 1.0, True)
+servo_bus.move_time_write(1, 0, 1.0, True)
 
-servo_bus.id_write(int(old_id), int(new_id))
+servo_bus.move_time_write(2, 90, 1.0, True)
+servo_bus.move_time_write(2, 0, 1.0, True)
+
+servo_bus.move_time_write(3, 90, 1.0, True)
+servo_bus.move_time_write(3, 0, 1.0, True)
+
+servo_bus.move_time_write(4, 90, 1.0, True)
+servo_bus.move_time_write(4, 0, 1.0, True)
+
+servo_bus.move_time_write(5, 90, 1.0, True)
+servo_bus.move_time_write(5, 0, 1.0, True)
 
 # Move servo with ID 1 to 90 degrees in 1.0 seconds
 # servo_bus.id_write(2, 1)
